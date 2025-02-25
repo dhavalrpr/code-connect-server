@@ -384,6 +384,15 @@ app.get("/", (req, res) => {
   });
 });
 
+// Health check endpoint
+app.get("/health", (req, res) => {
+  res.json({
+    status: "healthy af",
+    timestamp: new Date().toISOString(),
+    connections: io.engine.clientsCount
+  });
+});
+
 // Error handling
 app.use((err, req, res, next) => {
   logger.error('Express error', err);
