@@ -29,7 +29,7 @@ const logger = {
 
 // CORS configuration
 const corsOptions = {
-  origin: ["*"],
+  origin: ["https://codeconnect.up.railway.app"],
   methods: ['GET', 'POST'],
   credentials: true
 };
@@ -409,7 +409,7 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 // Start server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => logger.info(`Server running on port ${PORT}`));
 
 module.exports = { ACTIONS };
