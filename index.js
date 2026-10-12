@@ -29,7 +29,7 @@ const logger = {
 
 // CORS configuration
 const corsOptions = {
-  origin: ["https://codeconnect.up.railway.app","https://www.code-connect.live","http://localhost:3000"],
+  origin: ["https://codeconnect.up.railway.app","https://www.code-connect.live","https://app.codeconnectai.tech","https://codeconnectai.tech","http://localhost:3000"],
   methods: ['GET', 'POST'],
   credentials: true
 };
